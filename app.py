@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 import datetime
 import requests
 
@@ -41,6 +42,8 @@ if st.button('Get fare'):
     st.markdown(f"""
         ### Fare: ${round(response['fare'], 2)}
     """)
+    df = pd.DataFrame([[pickup_lat, pickup_long], [dropoff_lat, dropoff_long]], columns=['lat', 'lon'])
+    st.map(df)
 
 
 # 2. Let's build a dictionary containing the parameters for our API...
