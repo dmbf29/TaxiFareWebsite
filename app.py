@@ -6,6 +6,7 @@ CSS = """
 div.stButton > button:last-child {
     border-color: rgb(255, 75, 75) !important;
     color: rgb(255, 75, 75) !important;
+    width: 100%;
 }
 div.stButton > button:last-child:hover {
     background-color: rgb(255, 75, 75) !important;
